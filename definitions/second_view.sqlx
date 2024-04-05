@@ -1,0 +1,11 @@
+config {
+    type: "table",
+    description : "This table is responsible for loading the required data"
+}
+
+CREATE OR REPLACE TABLE
+  `cdf-data-extraction.aakif_dataform.transformed` AS
+SELECT
+  age_of_employee, name_of_employee
+FROM
+  ${ref("Dummy")}
